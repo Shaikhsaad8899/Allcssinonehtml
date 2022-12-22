@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Studies</title>
+    <link rel="stylesheet" href="Style.css" />
+    <style>body {
+      text-align: center;
+    }
+    .Divcenter p {
+      background-color: gray;
+    }
+    p.center {
+      background-color: yellow;
+    }
+    p#right {
+      background-color: yellow;
+    }
+    h1 {
+      color: gray;
+    }
+    h4,
+    h2,
+    h3 {
+      background-color: #eee;
+      text-transform: uppercase;
+    }
+    .box-model {
+      position: relative;
+      top: 20px;
+      background-image: linear-gradient(to right, red, yellow);
+      margin: 50px 50px;
+      padding: 10px;
+      outline: 10px solid gray;
+      width: max-content;
+      margin: auto;
+    }
+    .box-model-one {
+      text-align: center;
+    }
+    .box-model-one h1 {
+      text-align: center;
+      text-transform: uppercase;
+      color: #4caf50;
+    }
+    
+    .box-model-one p {
+      width: max-content;
+      text-indent: 50px;
+      text-align: justify;
+      letter-spacing: 3px;
+      margin: auto;
+    }
+    .box-model-one p.ex1 {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+    }
+    
+    .box-model-one a {
+      text-decoration: none;
+      color: #008cba;
+    }
+    span.a {
+      display: inline; /* the default for span */
+      width: 100px;
+      height: 50px;
+      padding: 5px;
+      border: 1px solid blue;
+      background-image: linear-gradient(to bottom right, red, yellow);
+    }
+    
+    span.b {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      padding: 5px;
+      border: 1px solid blue;
+      background-color: yellow;
+    }
+    
+    span.c {
+      display: block;
+      width: 100px;
+      height: 50px;
+      padding: 5px;
+      border: 1px solid blue;
+      background-color: yellow;
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .imgoggy {
+      float: right;
+    }
+    div#hover {
+      background-image: linear-gradient(180deg, red, yellow);
+    }
+    div#hover:hover {
+      background-image: linear-gradient(180deg, blue, green);
+      transition-property: all;
+      transition: 1s ease-in-out;
+    }
+    p#first-line-selector::first-line {
+      color: #ff0000;
+      font-variant: small-caps;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    p.test1 {
+      white-space: nowrap;
+      width: 200px;
+      border: 1px solid #000000;
+      overflow: hidden;
+      text-overflow: clip;
+    }
+    p.test {
+      width: 11em;
+      border: 1px solid #000000;
+      word-wrap: break-word;
+    }
+    p.test7 {
+      width: 140px;
+      border: 1px solid #000000;
+      word-break: keep-all;
+    }
+    
+    p.test8 {
+      width: 140px;
+      border: 1px solid #000000;
+      word-break: break-all;
+    }
+    p.test9 {
+      writing-mode: horizontal-tb;
+    }
+    
+    span.test10 {
+      writing-mode: vertical-rl;
+    }
+    
+    p.test10 {
+      writing-mode: vertical-rl;
+    }
+    p.test2 {
+      white-space: nowrap;
+      width: 200px;
+      border: 1px solid #000000;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .div001 {
+      transform: translate(5px, 10px);
+    }
+    .div002 {
+      transform: rotate(20deg);
+    }
+    .div003 {
+      transform: scale(1, 1.5);
+    }
+    .div004 {
+      transform: scaleX(1.4);
+    }
+    .div005 {
+      transform: scaleY(1.2);
+    }
+    .div006 {
+      transform: skewX(20deg);
+    }
+    .div007 {
+      transform: skewY(20deg);
+    }
+    .div008 {
+      transform: skew(20deg, 10deg);
+    }
+    .div009 {
+      transform: matrix(1, -0.3, 0, 1, 0, 0);
+    }
+    
+    .div0011 {
+      transform: rotateX(160deg);
+    }
+    .div0021 {
+      transform: rotateY(180deg);
+    }
+    .div0031 {
+      transform: rotateZ(75deg);
+    }
+    #hoverdiv1 {
+      height: 50px;
+      width: 100px;
+      margin: 5px;
+      background-color: red;
+    }
+    #hoverdiv1:hover {
+      background-color: red;
+      height: 100px;
+      transition: 1s ease;
+    }
+    #hoverdiv2 {
+      /* height: 50px; */
+      width: 100px;
+      margin: 5px;
+      background-color: red;
+      transition: width 2s, height 2s, transform 2s;
+      border-radius: 5px;
+    }
+    #hoverdiv2:hover {
+      background-color: red;
+      width: 300px;
+      height: 300px;
+      transform: rotate(360deg);
+      border-radius: 25px;
+    }
+    #hoverdiv3 {
+      /* height: 50px; */
+      width: 100px;
+      margin: 5px;
+      background-color: red;
+    }
+    #hoverdiv3:hover {
+      background-color: red;
+      /* height: 100px; */
+      width: 200px;
+      transition: 1s cubic-bezier(1, 2, 3, 4);
+      transition-duration: 3s;
+    }
+    #hoverdiv4 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+      animation-name: example;
+      animation-duration: 6s;
+      animation-delay: 1s;
+      animation-iteration-count: 2;
+    
+      z-index: 10;
+    }
+    
+    @keyframes example {
+      0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+      }
+      25% {
+        background-color: yellow;
+        left: 400px;
+        top: 0px;
+        border-radius: 15px;
+      }
+      50% {
+        background-color: blue;
+        left: 400px;
+        top: 400px;
+        border-radius: 30px;
+      }
+      75% {
+        background-color: green;
+        left: 0px;
+        top: 400px;
+        border-radius: 45px;
+      }
+      100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+        border-radius: 60px;
+      }
+    }
+    #hoverdiv5 {
+      /* height: 50px; */
+      width: 300px;
+      margin: 5px;
+      background-color: red;
+      transition-timing-function: linear;
+      transition: width 2s;
+    }
+    
+    #hoverdiv5:hover {
+      background-color: red;
+      width: 350px;
+      margin: 5px;
+      /* height: 50px; */
+      transition-timing-function: linear;
+    }
+    
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+    
+    .tooltip .tooltiptext {
+      top: 0px;
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+    
+      text-align: center;
+      border-radius: 6px;
+      padding: 10px 0;
+    
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+    .pagination {
+      display: inline-block;
+    }
+    
+    .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+    
+    .pagination a.active {
+      background-color: #4caf50;
+      color: white;
+      border-radius: 5px;
+    }
+    
+    .pagination a:hover:not(.active) {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+    #resizingDiv {
+      border: 2px solid;
+      padding: 20px;
+      width: 300px;
+      resize: both;
+      overflow: auto;
+    }
+    </style>
+  </head>
+  <body>
+
+  <div class="tooltip">Hover over me
+      <span class="tooltiptext">Tooltip text</span>
+    </div></BR></BR>
+    <h1>Selectors (applied with Element Selector)</h1>
+    <div class="Divcenter">
+      <p class="center">p with class center</p>
+      <p class="right">p with class center</p>
+      <p id="right">p with id right</p>
+      <h4>
+        h4 applied with grouping selector, #eee background- color & text
+        transform for making it uppercase
+      </h4>
+      <h2>
+        h2 applied with grouping selector, #eee background- color & text
+        transform for making it uppercase
+      </h2>
+      <h3>
+        h3 applied with grouping selector, #eee background- color & text
+        transform for making it uppercase
+      </h3>
+      <h2>text-overflow: clip:</h2>
+      <p class="test1">This is some long text that will not fit in the box</p>
+
+      <h2>text-overflow: ellipsis:</h2>
+      <p class="test2">This is some long text that will not fit in the box</p>
+      <p class="test">
+        This paragraph contains a very long word:
+        thisisaveryveryveryveryveryverylongword. The long word will break and
+        wrap to the next line.
+      </p>
+      <h1>The word-break Property</h1>
+
+      <p class="test7">
+        This paragraph contains some text. This line will-break-at-hyphens.
+      </p>
+
+      <p class="test8">
+        This paragraph contains some text. The lines will break at any
+        character.
+      </p>
+      ......................................................................
+      Different Modes of Writing
+      ......................................................................
+      <p class="test9">Some text with default writing-mode.</p>
+
+      <p>
+        Some text with a span element with a
+        <span class="test10">vertical-rl</span> writing-mode.
+      </p>
+
+      <p class="test10">Some text with writing-mode: vertical-rl.</p>
+      <div class="box-model">
+        <p>
+          position: relative; <br />
+          top: 20px;<br />
+          background-color: Red;<br />
+          margin: 50px 50px ;<br />
+          padding: 10px ;<br />
+          outline: 10px solid black;<br />
+          width: max-content;<br />
+          margin: auto; }<br />
+        </p>
+      </div>
+      <br /><br />
+      <div style="display: flex">
+        <div id="hoverdiv1">1111111</div>
+        <div id="hoverdiv2">
+          #hoverdiv2 { transition: width 2s, height 2s, transform 2s; }
+          <br />
+          #hoverdiv2:hover { width: 300px; height: 300px; transform:
+          rotate(360deg); }
+        </div>
+        <div id="hoverdiv3">
+          #hoverdiv3 { } <br />
+          width: 200px; #hoverdiv3:hover { transition: 1s ease;
+          transition-duration: 3s; }
+        </div>
+       
+        <div id="hoverdiv5">
+          #hoverdiv5 { transition-timing-function: linear; transition: width 2s;
+          }
+          <br />
+          #hoverdiv5:hover { transition-timing-function: linear; }
+        </div>
+        <div id="hoverdiv4">#hoverdiv4:hover { transition: 1s ease; }</div>
+      </div>
+      <br /><br />
+      <div style="display: flex; text-align: center; justify-content: center">
+        <div
+          class="div001"
+          style="
+            width: max-content;
+            background-color: violet;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: translate(5px, 10px);
+        </div>
+        <div
+          class="div002"
+          style="
+            width: max-content;
+            background-color: yellow;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: rotate(20deg);
+        </div>
+        <div
+          class="div003"
+          style="
+            width: max-content;
+            background-color: seagreen;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: scale(1, 1.5);
+        </div>
+        <div
+          class="div004"
+          style="
+            width: max-content;
+            background-color: tomato;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: scaleX(1.4);
+        </div>
+        <div
+          class="div005"
+          style="
+            width: max-content;
+            background-color: orange;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: scaleY(1.2);
+        </div>
+        <div
+          class="div006"
+          style="
+            width: max-content;
+            background-color: greenyellow;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: skewX(20deg);
+        </div>
+        <div
+          class="div007"
+          style="
+            width: max-content;
+            background-color: green;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: skewY(20deg);
+        </div>
+        <div
+          class="div008"
+          style="
+            width: max-content;
+            background-color: blue;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: skew(20deg, 10deg);
+        </div>
+        <div
+          class="div009"
+          style="
+            width: max-content;
+            background-color: red;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: matrix(1, -0.3, 0, 1, 0, 0);
+        </div>
+      </div>
+      <div style="display: flex; text-align: center; justify-content: center">
+        <div
+          class="div0011"
+          style="
+            width: max-content;
+            background-color: violet;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: rotateX(110deg);
+        </div>
+        <div
+          class="div0021"
+          style="
+            width: max-content;
+            background-color: yellow;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: rotateY(175deg);
+        </div>
+        <div
+          class="div0031"
+          style="
+            width: max-content;
+            background-color: seagreen;
+            color: white;
+            margin: 5px 20px;
+            height: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          transform: rotateZ(75deg);
+        </div>
+      </div>
+      <div>
+        <p id="first-line-selector">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
+          voluptates nobis ex repudiandae, molestias facere modi ducimus
+          similique rem hic debitis natus nemo, dolores, minima sapiente
+          suscipit autem obcaecati? Fugit. <br />Here
+          p#first-line-selector<strong>::first-line</strong> is used to color or
+          give any effect to first line of any box of text <br />
+        </p>
+        <h1>
+          : is for Psuedo class <br />
+          :: is for Pseudo elements
+        </h1>
+      </div>
+      <br />
+      <div class="div" style="display: flex; justify-content: center">
+        <div
+          id="hover"
+          style="width: 100px; color: white; height: 100px; margin: 10px"
+        >
+          1: Hover Me
+        </div>
+      </div>
+      <div class="box-model-one">
+        <br />
+        <h1>text formatting</h1>
+        <p>
+          This text is styled with some of the text formatting properties.
+          <a target="_blank" href="">"Try it Yourself"</a> link.
+        </p>
+        <p>
+          { <br />
+          direction: rtl; <br />
+          unicode-bidi: bidi-override; } <br />
+          Below Text is used the above css :
+        </p>
+        <p class="ex1">
+          This text is styled with some of the text formatting properties.
+          <a target="_blank" href="">"Try it Yourself"</a> link.
+        </p>
+        <br />
+        <p style="white-space: normal; width: 80vw; text-align: center">
+          <strong
+            >HEre style="white-space: normal; is used white-space is the space
+            at the end of lines
+          </strong>
+          <br />
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, optio
+          natus explicabo voluptates iusto praesentium quis suscipit? Vel error
+          molestias quisquam tempore laborum consequuntur dolorem sequi cum
+          aperiam architecto asperiores provident voluptatibus laboriosam eaque
+          ratione nihil labore, non quis inventore quos alias accusamus officiis
+          ipsam? Quaerat earum ab officia. Corrupti dignissimos libero est
+          consectetur corporis cupiditate, qui labore quibusdam distinctio rerum
+          veritatis voluptatem asperiores odit neque ex saepe quo vel similique
+          sapiente laudantium! Ullam natus doloremque debitis dolorum
+        </p>
+      </div>
+
+      <div
+        class="dropdown"
+        style="height: 50px; background-color: red; margin: 15px"
+      >
+        Hover over this red box
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+          <p>Hello World!</p>
+        </div>
+      </div>
+      <div style="display: flex">
+        <div style="width: 20vw; margin: 5px; height: 150px; overflow: hidden">
+          <p>
+            <strong>overflow: hidden;</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            dolorem illum in accusantium voluptatem neque repudiandae, dolore
+            nulla vel totam earum nesciunt labore officia impedit veniam a quod
+            dolores quos aliquid corporis provident voluptatum nam praesentium!
+            Omnis, error cum vero accusantium sit eum! Excepturi, quia autem.
+          </p>
+        </div>
+        <div style="width: 20vw; margin: 5px; height: 150px; overflow: scroll">
+          <p>
+            <strong>overflow: scroll;</strong> Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Dignissimos dolorem illum in
+            accusantium voluptatem neque repudiandae, dolore nulla vel totam
+            earum nesciunt labore officia impedit veniam a quod dolores quos
+            aliquid corporis provident voluptatum nam praesentium! Omnis, error
+            cum vero accusantium sit eum! Excepturi, quia autem.
+          </p>
+        </div>
+        <div style="width: 20vw; margin: 5px; height: 150px; overflow: visible">
+          <p>
+            <strong>overflow: visible;</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            dolorem illum in accusantium voluptatem neque repudiandae, dolore
+            nulla vel totam earum nesciunt labore officia impedit veniam a quod
+            dolores quos aliquid corporis provident voluptatum nam praesentium!
+            Omnis, error cum vero accusantium sit eum! Excepturi, quia autem.
+          </p>
+        </div>
+        <div style="width: 20vw; margin: 5px; height: 150px; overflow: auto">
+          <p>
+            <strong>overflow: auto;</strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+            dolorem illum in accusantium voluptatem neque repudiandae, dolore
+            nulla vel totam earum nesciunt labore officia impedit veniam a quod
+            dolores quos aliquid corporis provident voluptatum nam praesentium!
+            Omnis, error cum vero accusantium sit eum! Excepturi, quia autem.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <img
+          style="width: 30vw"
+          src="https://www.csssolid.com/images/csspositions/css-position-all.png"
+          alt=""
+        /> <br>
+        <img  style="width: 60vw" src="https://res.cloudinary.com/vzhurudolu-cz/image/upload/w_1200,q_100/v1581484633/cssmine_16-9/object-fit-property_cht6qt.png" alt="">
+      </div>
+      <div style="background-color: rgb(52, 165, 52)">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+        consequat scelerisque elit sit amet consequat. Aliquam erat volutpat.
+        <span class="a">display:inline</span>
+        <span class="a">display:inline</span> gravida nisl sit amet facilisis.
+        Nullam cursus fermentum velit sed laoreet.<span class="b"
+          >display:inline-block</span
+        >
+        <span class="b">display:inline-block</span>Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Quia, quidem.
+        <span class="c">display:block</span>
+        <span class="c">display:block</span>
+        <strong>
+          <ul style="text-align: left">
+            <li>
+              Compared to display: inline, the major difference is that display:
+              inline-block allows to set a width and height on the element.
+            </li>
+            <li>
+              Also, with display: inline-block, the top and bottom
+              margins/paddings are respected, but with display: inline they are
+              not.
+            </li>
+            <li>
+              Compared to display: block, the major difference is that display:
+              inline-block does not add a line-break after the element, so the
+              element can sit next to other elements.
+            </li>
+          </ul>
+        </strong>
+      </div>
+      <div class="clearfix" style="border: 4px solid black">
+        <img
+          class="imgoggy"
+          src="https://yt3.ggpht.com/-ofy9vrImVdA/AAAAAAAAAAI/AAAAAAAAAAA/hP89qixVmEk/s900-c-k-no-mo-rj-c0xffffff/photo.jpg"
+          alt="Pineapple"
+          width="170"
+          height="170"
+        />
+        111Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet... Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Tenetur ipsa, delectus est harum, distinctio dicta autem libero fugiat
+        saepe repellat in? Dolor culpa beatae eaque quas atque? Praesentium
+        tenetur neque, perferendis fuga repudiandae in enim voluptate laboriosam
+        nam nobis quae est quibusdam ex consequatur dignissimos ipsa iusto
+        ducimus atque illum!
+        <h1>
+          With Clearfix the flaoating image doesnt comes out of the parent div
+        </h1>
+      </div>
+      <br />
+      <div class="clearfix1" style="border: 4px solid black">
+        <img
+          class="imgoggy"
+          src="https://yt3.ggpht.com/-ofy9vrImVdA/AAAAAAAAAAI/AAAAAAAAAAA/hP89qixVmEk/s900-c-k-no-mo-rj-c0xffffff/photo.jpg"
+          alt="Pineapple"
+          width="170"
+          height="170"
+        />
+        111Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet... Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Tenetur ipsa, delectus est harum, distinctio dicta autem libero fugiat
+        saepe repellat in? Dolor culpa beatae eaque quas atque? Praesentium
+        tenetur neque, perferendis fuga repudiandae in enim voluptate laboriosam
+        nam nobis quae est quibusdam ex consequatur dignissimos ipsa iusto
+        ducimus atque illum!
+        <h1>
+          Without Clearfix the flaoating image comes out of the parent div
+        </h1>
+      </div>
+      <br /><br /><br /><br /><br /><br />
+      <div>
+        <p>
+          <img
+            src="https://www.csssolid.com/images/csspositions/css-position-all.png"
+            alt="Pineapple"
+            style="width: 170px; height: 170px; margin-left: 15px; float: left"
+          />
+
+          <img
+            src="https://www.csssolid.com/images/csspositions/css-position-all.png"
+            alt="Pineapple"
+            style="width: 170px; height: 170px; margin-left: 15px; float: right"
+          />
+
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+          scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices
+          nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut
+          aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
+          odio. Praesent convallis urna a lacus interdum ut hendrerit risus
+          congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
+          In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec
+          vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+          non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
+          purus. Mauris quis diam velit.
+        </p>
+        <figcaption style="float: right; clear: right">
+          Floating right Image & figcaption with css {float: right;clear:
+          right;}
+        </figcaption>
+        <figcaption style="float: left; clear: left">
+          Floating left Image & figcaption with css {float: left;clear: left;}
+        </figcaption>
+      </div>
+      <br /><br /><br /><br /><br /><br />
+      <div id="resizingDiv">
+        <p>Let the user resize both the height and the width of this div element.</p>
+        <p>To resize: Click and drag the bottom right corner of this div element.</p>
+      </div>
+      
+      <br /><br /><br /><br /><br /><br />
+     
+<h2>Rounded Active and Hover Buttons</h2>
+
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#" class="active">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+    </div>
+  </body>
+</html>
